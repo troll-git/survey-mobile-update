@@ -88,7 +88,7 @@ class DrawerMenu extends Component<IMapProps, IMapState> implements Observer {
         setTimeout(async () => await this.synchronization(), 2000);
     }
 
-    async componentWillReceiveProps(nextProps: Readonly<IMapProps>, nextContext: any) {
+    async UNSAFE_componentWillReceiveProps(nextProps: Readonly<IMapProps>, nextContext: any) {
         if(nextProps.navigation.state.isDrawerOpen !== this.props.navigation.state.isDrawerOpen) {
             if(nextProps.navigation.state.isDrawerOpen) {
                 await this.checkStatus();

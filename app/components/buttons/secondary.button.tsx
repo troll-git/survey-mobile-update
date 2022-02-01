@@ -5,7 +5,6 @@ import {
     Platform,
     StyleSheet
 } from 'react-native';
-import {CirclesLoader} from 'react-native-indicator';
 import {COLORS} from "../../styles/colors";
 
 export const SecondaryButton = (props: any) => {
@@ -28,9 +27,6 @@ export const SecondaryButton = (props: any) => {
     return (
         <TouchableOpacity>
             <Text style={[styles.title, textStyle]}>{title}</Text>
-            {/*{*/}
-                {/*disabled ? <CirclesLoader/> : null*/}
-            {/*}*/}
     </TouchableOpacity>
 )
 };

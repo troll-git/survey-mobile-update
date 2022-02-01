@@ -66,7 +66,7 @@ class MapViewer extends Component<IMapProps, IMapState> {
         }, 2000);
     }
 
-    componentWillReceiveProps(nextProps: Readonly<IMapProps>, nextContext: any): void {
+    UNSAFE_componentWillReceiveProps(nextProps: Readonly<IMapProps>, nextContext: any): void {
         if(nextProps.relocate) {
             this.relocation(nextProps.region, 2000);
         }

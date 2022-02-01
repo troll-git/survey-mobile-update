@@ -63,7 +63,7 @@ class SignInScreen extends React.Component<IMapProps, IMapState> {
         this.props.changeSettings({});
     }
 
-    componentWillReceiveProps(nextProps: Readonly<IMapProps>, nextContext: any): void {
+    UNSAFE_componentWillReceiveProps(nextProps: Readonly<IMapProps>, nextContext: any): void {
         if(nextProps.user !== this.props.user) {
             this.props.navigation.navigate('App');
         }

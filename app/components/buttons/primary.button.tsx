@@ -4,7 +4,7 @@ import {
     Text,
     StyleSheet, View,
 } from 'react-native';
-import {CirclesLoader} from 'react-native-indicator';
+import {ActivityIndicator} from 'react-native';
 import {COLORS} from '../../styles/colors';
 
 export const PrimaryButton = (props: any) => {
@@ -38,7 +38,7 @@ export const PrimaryButton = (props: any) => {
                 </Text>
                 <View style={localStyles.loader}>
                     {
-                        disabled ? <CirclesLoader size={20} dotRadius={4}/> : null
+                        disabled ? <ActivityIndicator size={20} /> : null
                     }
                 </View>
         </TouchableOpacity>

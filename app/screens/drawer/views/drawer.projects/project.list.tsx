@@ -10,7 +10,7 @@ import {fetchPowerlinesOffline, fetchProjectPowerlines} from "../../../../redux/
 import {showDialogContent} from "../../../../redux/modules/dialogs";
 import {fetchLocations, fetchLocationsOffline, selectLocation} from "../../../../redux/modules/map/locations";
 import {View, Text, FlatList, StyleSheet, TouchableHighlight, Platform, TextInput, ScrollView} from "react-native";
-import {CirclesLoader} from 'react-native-indicator';
+import {ActivityIndicator} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {COLORS} from "../../../../styles/colors";
 import {connectionSelector} from "../../../../redux/modules/connect";
@@ -97,7 +97,7 @@ class ProjectList extends Component<IMapProps, IMapState> {
             <View style={localStyles.wrapper}>
                 {
                     this.props.loading ? (
-                        <CirclesLoader />
+                        <ActivityIndicator />
                     ) : (
                         <View style={localStyles.wrapper}>
                             <View style={localStyles.search}>

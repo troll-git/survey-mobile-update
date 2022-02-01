@@ -202,7 +202,7 @@ class MapController extends React.Component<IMapProps, IMapState> {
         return nextState.shouldUpdate;
     }
 
-    componentWillReceiveProps(nextProps: Readonly<IMapProps>, nextContext: any): void {
+    UNSAFE_componentWillReceiveProps(nextProps: Readonly<IMapProps>, nextContext: any): void {
         if(nextProps.isDrawerOpen !== this.props.isDrawerOpen && nextProps.isDrawerOpen) {
             this.cluster = [];
             this.setState({

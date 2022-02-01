@@ -7,7 +7,7 @@ import AppNavigator from './app/app.navigator/index';
 import DialogContainer from './app/components/dialog.component';
 import AlertContainer from './app/components/dialog.component/dialogs/alert.dialog';
 
-import {AppLoading} from "expo";
+import AppLoading from 'expo-app-loading';
 import * as Font from 'expo-font';
 import * as Location from "expo-location";
 import * as Permissions from 'expo-permissions';

@@ -11,7 +11,7 @@ interface IMapProps {
 }
 
 class Notifier extends Component<IMapProps> {
-    componentWillReceiveProps(nextProps: Readonly<IMapProps>, nextContext: any): void {
+    UNSAFE_componentWillReceiveProps(nextProps: Readonly<IMapProps>, nextContext: any): void {
         if(!nextProps.connection) {
             this.props.showAlert('Offline mode enabled: connect to the Internet to get images and sync changes');
         }
