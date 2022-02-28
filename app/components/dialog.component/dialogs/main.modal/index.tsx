@@ -7,7 +7,7 @@ import {
     View,
     Text,
     StyleSheet,
-    ScrollView, Alert, Platform, TouchableOpacity,
+    ScrollView, Alert, Platform, TouchableOpacity, Linking,
 } from 'react-native';
 import { Dropdown } from 'react-native-material-dropdown';
 import Menu, {MenuItem, MenuDivider} from 'react-native-material-menu';
@@ -21,7 +21,6 @@ import DateTimePicker from "react-native-modal-datetime-picker";
 import UploadComponent from "../../../upload.component";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
-import {Linking} from "expo";
 import {COLORS} from "../../../../styles/colors";
 
 interface IMapProps {

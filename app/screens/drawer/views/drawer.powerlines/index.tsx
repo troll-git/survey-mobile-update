@@ -73,7 +73,7 @@ class DrawerPowerlines extends Component<IMapProps> {
         return (
             <View style={localStyles.container}>
                 <Text style={localStyles.title}>Wybierz linie:</Text>
-                <ScrollView nestedScrollEnabled={true}>
+                
                     <FlatList
                         data={
                             [
@@ -105,7 +105,7 @@ class DrawerPowerlines extends Component<IMapProps> {
                             }
                         }
                     />
-                </ScrollView>
+                
             </View>
         )
     }

@@ -157,8 +157,9 @@ export default class MainList extends Component<IMapProps> {
                         <Text style={localStyles.warning}>Proszę wybrać projekt</Text>
                     ) : (
                         <View style={localStyles.wrapper}>
-                            <ScrollView contentContainerStyle={localStyles.scroll}>
+                            
                                 <FlatList
+                                    style={localStyles.scroll}
                                     nestedScrollEnabled={true}
                                     ItemSeparatorComponent={this.renderSeparator}
                                     data={MainList.entityFilter(selectedList, this.props.search)}
@@ -171,7 +172,7 @@ export default class MainList extends Component<IMapProps> {
                                         )
                                     }}
                                 />
-                            </ScrollView>
+                            
                         </View>
                     )
                 }

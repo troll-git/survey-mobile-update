@@ -31,8 +31,8 @@ function* startChannel(syncActionName) {
             listener(isConnected);
         };
 
-        //NetInfo.addEventListener(handleConnectivityChange);
-        return () => NetInfo.addEventListener(handleConnectivityChange);
+        NetInfo.addEventListener(handleConnectivityChange);
+        return () => NetInfo.useNetInfo() //.addEventListener(handleConnectivityChange);
     });
 
     while (true) {

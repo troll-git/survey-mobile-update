@@ -110,9 +110,9 @@ class ProjectList extends Component<IMapProps, IMapState> {
                                     value={this.state.search}
                                 />
                             </View>
-                            <ScrollView contentContainerStyle={localStyles.scroll}>
                                 <FlatList
                                     nestedScrollEnabled={true}
+                                    style={localStyles.scroll}
                                     ItemSeparatorComponent={this.renderSeparator}
                                     data={this.props.projects.filter((el) => {
                                         if (this.state.search) {
@@ -131,14 +131,14 @@ class ProjectList extends Component<IMapProps, IMapState> {
                                                 onPress={() => this.selectProject(item)}
                                                 onShowUnderlay={separators.highlight}
                                                 onHideUnderlay={separators.unhighlight}>
-                                                <View style={{backgroundColor: `${COLORS.BACKGROUND}`}}>
+                                                <View style={{backgroundColor: COLORS.BACKGROUND}}>
                                                     <Text style={styleItem}>{item.title}</Text>
                                                 </View>
                                             </TouchableHighlight>
                                         )
                                     }}
                                 />
-                            </ScrollView>
+                            
                         </View>
                     )
                 }

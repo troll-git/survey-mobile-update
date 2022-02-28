@@ -166,7 +166,7 @@ class MapController extends React.Component<IMapProps, IMapState> {
         }
 
         let locationResult = null;
-        let {status} = await Permissions.askAsync(Permissions.LOCATION);
+        let {status} = await Permissions.askAsync(Permissions.LOCATION_FOREGROUND);
 
         if(status !== 'granted') {
             locationResult = 'Permission to access location was denied';
@@ -176,7 +176,7 @@ class MapController extends React.Component<IMapProps, IMapState> {
         }
 
         let location = await Location.getCurrentPositionAsync({
-            enableHighAccuracy: true, timeout: 20000,
+            //enableHighAccuracy: true, timeout: 20000,
         });
 
         this.setState({
@@ -664,7 +664,7 @@ class MapController extends React.Component<IMapProps, IMapState> {
         }
 
         let location = await Location.getCurrentPositionAsync({
-            enableHighAccuracy: true, timeout: 20000,
+            //enableHighAccuracy: true, timeout: 20000,
         });
 
         this.setState({
